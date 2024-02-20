@@ -4,9 +4,6 @@ As a team, create your shared project where you will build an API that outputs R
 
 In this first step, please create a Spring Boot project (Web + Lombok) and share it via GitHub. Do not add any logic yet - we will do that in the next steps.
 
-What is the URL of your shared GitHub repository?
-`inputfield`
-
 ## Coding: Passing Data
 
 Now use the data from this Rick&Morty API: https://rickandmortyapi.com

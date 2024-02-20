@@ -1,7 +1,6 @@
 package net.ugurkartal.springrestclientdemo.services;
 
 import net.ugurkartal.springrestclientdemo.models.Character;
-import net.ugurkartal.springrestclientdemo.models.CharacterInfo;
 import net.ugurkartal.springrestclientdemo.models.CharacterResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
