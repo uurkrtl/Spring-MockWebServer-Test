@@ -2,6 +2,7 @@ package net.ugurkartal.springrestclientdemo.services;
 
 import net.ugurkartal.springrestclientdemo.models.Character;
 import net.ugurkartal.springrestclientdemo.models.CharacterResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -9,9 +10,14 @@ import java.util.List;
 
 @Service
 public class CharacterService {
-    private RestClient restClient = RestClient.builder()
-            .baseUrl("https://rickandmortyapi.com/api")
-            .build();
+
+    private RestClient restClient;
+    public CharacterService(@Value("${basic.url}") String basicUrl) {
+        restClient = RestClient.builder()
+                .baseUrl(basicUrl)
+                .build();
+    }
+
 
     public List<Character> getAllCharacters() {
         CharacterResponse characterResponse = restClient.get()
